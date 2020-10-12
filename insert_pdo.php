@@ -1,5 +1,5 @@
 <?php
-    //-----------------Conexão---------------
+    //-----------------CONEXÃO---------------
         try {
             $pdo = new PDO('mysql:dbname=cadastropdo;host=localhost', 'root', '');
         } catch (\PDOException $e) {
@@ -8,7 +8,7 @@
         catch (\Exception $e) {
             echo "Erro Generico" . $e->getMessage();
         }
-    //----------------Insert-----------------
+    //----------------INSERT-----------------
         //1° Forma
             $res = $pdo->prepare("INSERT INTO pessoa (nome, telefone, email) VALUES (:n, :t, :e)");
             //Substituições
